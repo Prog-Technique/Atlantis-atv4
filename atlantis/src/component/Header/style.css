@@ -95,6 +95,7 @@ input[type=checkbox] {
         background-color: #00a8cb;
         right: 0;
         left: 0;
+        height: 59vh;
         text-align: center;
         margin-top: 2%;
         padding: 15px 0px;
@@ -105,8 +106,12 @@ input[type=checkbox] {
         background-color: #337ab7;
     }
 
+    .menu li {
+        margin-top: 5%;
+    }
+
     .menu li+li {
-        margin: 10px;
+        margin: 20px;
     }
 
     input[type=checkbox]:checked~.menu {

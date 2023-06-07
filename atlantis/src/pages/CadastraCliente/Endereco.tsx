@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import { FiArrowLeft } from "react-icons/fi";
 import Header from "../../component/Header";
 
 export default function Endereco() {
@@ -43,12 +44,13 @@ export default function Endereco() {
     return (
         <> <Header/>
             <div className="onTop">
-                <Link to="/cadastrar_cliente">VOLTAR</Link>
+                <Link to="/cadastrar_cliente"><FiArrowLeft size={25}/></Link>
                 <h1>Cadastro de cliente</h1>
                 <h2>Dados de endereço</h2>
             </div>
 
             <div className="container">
+            <div className="border">
                 <form className="content">
 
                     <div className="input">
@@ -97,6 +99,7 @@ export default function Endereco() {
                         <Link to="/cadastrar_cliente/documentos">PRÓXIMO</Link>
                     </button>
                 </form>
+                </div>
             </div>
         </>
     )

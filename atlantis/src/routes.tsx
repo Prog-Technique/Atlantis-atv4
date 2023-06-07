@@ -1,22 +1,20 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Home from './pages/home';
+import Home from './pages/Sozinhos/home';
 
 import Pessoal from './pages/CadastraCliente/Pessoal';
 import Endereco from './pages/CadastraCliente/Endereco';
 import Documentos from './pages/CadastraCliente/Documentos';
 import Dependentes from './pages/CadastraCliente/Dependentes';
 
-import Acomodacao from './pages/Acomodacao';
+import Acomodacao from './pages/Sozinhos/cadastraAcomodacao';
+import VinculaHospedeQuarto from './pages/Sozinhos/vincula';
 
-import Clientes from './pages/Dados/cliente';
+import EditarCliente from './pages/Sozinhos/editarCli';
 
-import Listagens from './pages/listagens';
-
-import EditarCliente from './pages/Editar/clientes';
-
-import AddProduto from './pages/AdicionarPS/clientesVprodutos';
-import AddServico from './pages/AdicionarPS/clientesVservicos';
+import Acomodacoes from './pages/Listagens/acomodacoes';
+import Titular from './pages/Listagens/listaTitular';
+import Dependente from './pages/Listagens/listaDependentes';
 
 import './index.css';
 
@@ -32,14 +30,14 @@ export default function RoutesApp() {
                 <Route path='/cadastrar_cliente/dependentes' element={<Dependentes />} />
                 
                 <Route path='/cadastrar_acomodacao' element={<Acomodacao />} />
+                <Route path='/vincular' element={<VinculaHospedeQuarto />} />
 
-                <Route path='/clientes' element={<Clientes />} />
-                <Route path='/listagens' element={<Listagens />} />
-
+                <Route path='/titular' element={<Titular />} />
+                <Route path='/dependente' element={<Dependente />} />
                 <Route path='/editar_cliente/1' element={<EditarCliente />} />
                 
-                <Route path='/adicionar_produto/1' element={<AddProduto />} />
-                <Route path='/adicionar_servico/1' element={<AddServico />} />
+                <Route path='/acomodacoes' element={<Acomodacoes />} />
+
             </Routes>
         </Router>
     );

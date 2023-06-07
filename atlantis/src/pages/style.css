@@ -7,13 +7,21 @@ h1{
     flex-direction: row;
     justify-content: center;
     gap: 5em;
-    height: 60vh;
+    height: auto;
+}
+
+.border {
+    margin-top: 5%;
+    padding: 45px 100px;
+    box-shadow: 1px 1px 10px #4c4c4c;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
 }
 
 .input {

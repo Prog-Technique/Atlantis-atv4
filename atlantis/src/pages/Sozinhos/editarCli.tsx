@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import { FiArrowLeft } from "react-icons/fi";
 import Header from "../../component/Header";
+import { FiArrowLeft } from "react-icons/fi";
 
-export default function Dependentes() {
+export default function EditarCliente() {
 
     const [formValue, setFormValue] = useState([{ documento: "" }])
 
@@ -85,34 +85,35 @@ export default function Dependentes() {
     return (
         <> <Header />
             <div className="onTop">
-                <Link to="/cadastrar_cliente/documentos">
+                <Link to="/clientes">
                     <FiArrowLeft size={25}/></Link>
-                <h1>Cadastro de cliente</h1>
-                <h2>Dados de dependentes</h2>
+                <h1>Visualizar/Editar</h1>
+                <h2>Cliente: Amanda</h2>
             </div>
 
             <div className="container">
+                
             <div className="border">
                 <form className="content">
 
                     <div className="input">
                         <label htmlFor="name">Nome</label>
-                        <input id="name" type="text" />
+                        <input id="name" type="text" placeholder="Amanda" />
                     </div>
 
                     <div className="input">
                         <label htmlFor="social_name">Nome social</label>
-                        <input id="social_name" type="text" />
+                        <input id="social_name" type="text" placeholder="Dika" />
                     </div>
 
                     <div className="input">
                         <label htmlFor="dataNasc">Data de nascimento</label>
-                        <input id="dataNasc" type="date" />
+                        <input id="dataNasc" type="date" value="2003-10-01" />
                     </div>
 
                     <div className="input">
                         <label htmlFor="dataCad">Data de cadastro (hoje)</label>
-                        <input id="dataCad" type="date" />
+                        <input id="dataCad" type="date" value="2023-03-03" />
                     </div>
 
                 </form>
@@ -125,7 +126,7 @@ export default function Dependentes() {
                             <div className="input">
                                 <label htmlFor="tipo">Tipo de documento</label>
                                 <select>
-                                    <option>Selecione</option>
+                                    {/* <option>Selecione</option> */}
                                     <option>CPF</option>
                                     <option>RG</option>
                                     <option>Passaporte</option>
@@ -134,12 +135,12 @@ export default function Dependentes() {
 
                             <div className="input">
                                 <label htmlFor="numero">Número do documento</label>
-                                <input id="numero" type="text" />
+                                <input id="numero" type="text" placeholder="461.715.496-55" />
                             </div>
 
                             <div className="input">
                                 <label htmlFor="dataexp">Data de expedição</label>
-                                <input id="dataexp" type="date" />
+                                <input id="dataexp" type="date" value="2011-03-07" />
                             </div>
 
                             {index ?
@@ -157,39 +158,39 @@ export default function Dependentes() {
 
                     <div className="input">
                         <label htmlFor="cep">CEP</label>
-                        <input id="cep" type="text" value={address.cep} onChange={handleCep} />
+                        <input id="cep" type="text" placeholder="12235820" onChange={handleCep} />
                     </div>
 
                     <div className="input">
                         <label htmlFor="rua">Rua</label>
-                        <input id="rua" type="text" value={address.rua} onChange={handleCep} />
+                        <input id="rua" type="text" placeholder="Rua Treze" onChange={handleCep} />
                     </div>
 
                     <div className="input">
                         <label htmlFor="bairro">Bairro</label>
-                        <input id="bairro" type="txt" value={address.bairro} onChange={handleCep} />
+                        <input id="bairro" type="txt" placeholder="Parque Industrial" onChange={handleCep} />
                     </div>
 
                     <div className="input">
                         <label htmlFor="numero">Número</label>
-                        <input id="numero" type="txt" />
+                        <input id="numero" type="txt" placeholder="231" />
                     </div>
                 </form>
 
                 <form className="content">
                     <div className="input">
                         <label htmlFor="cidade">Cidade</label>
-                        <input id="cidade" type="txt" value={address.cidade} onChange={handleCep} />
+                        <input id="cidade" type="txt" placeholder="São José dos Campos" onChange={handleCep} />
                     </div>
 
                     <div className="input">
                         <label htmlFor="estado">Estado</label>
-                        <input id="estado" type="txt" value={address.estado} onChange={handleCep} />
+                        <input id="estado" type="txt" placeholder="SP" onChange={handleCep} />
                     </div>
 
                     <div className="input">
                         <label htmlFor="pais">Pais</label>
-                        <input id="pais" type="txt" value={address.pais} onChange={handleCep} />
+                        <input id="pais" type="txt" placeholder="Brasil" onChange={handleCep} />
                     </div>
 
                     <div className="input">
@@ -204,7 +205,7 @@ export default function Dependentes() {
 
                             <div className="input">
                                 <label htmlFor="telefone">Telefone</label>
-                                <input id="telefone" type="tel" value={e.telefone} onChange={e => handleChange2(index, e)} />
+                                <input id="telefone" type="tel" placeholder="(12) 99191-2428" onChange={e => handleChange2(index, e)} />
                                 {index ?
                                     <button type="button" style={{ backgroundColor: "red" }} onClick={() => removeFormField2(index)}>Deletar</button>
                                     : null}
@@ -216,10 +217,10 @@ export default function Dependentes() {
                     <button type="button" style={{ backgroundColor: "gray" }} onClick={() => addFormField2()}>Adicionar outro telefone</button>
 
                     <button type="submit">
-                        <Link to="/">ENVIAR</Link>
+                        <Link to="/clientes">ENVIAR</Link>
                     </button>
                 </form>
-                </div>
+            </div>
             </div>
         </>
     )

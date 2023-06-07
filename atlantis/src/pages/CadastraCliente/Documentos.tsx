@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import { FiArrowLeft } from "react-icons/fi";
 import Header from "../../component/Header";
 
 export default function Documentos() {
@@ -25,12 +26,13 @@ export default function Documentos() {
     return (
         <> <Header />
             <div className="onTop">
-                <Link to="/cadastrar_cliente/endereco">VOLTAR</Link>
+                <Link to="/cadastrar_cliente/endereco"><FiArrowLeft size={25}/></Link>
                 <h1>Cadastro de cliente</h1>
                 <h2>Dados de documentos</h2>
             </div>
 
             <div className="container">
+            <div className="border">
 
                 {formValue.map((e, index) => (
                     <>
@@ -69,7 +71,9 @@ export default function Documentos() {
 
                     <button type="submit">
                         <Link to="/cadastrar_cliente/dependentes">PRÓXIMO</Link>
-                    </button></form>
+                    </button>
+                </form>
+                </div>
             </div>
         </>
     )

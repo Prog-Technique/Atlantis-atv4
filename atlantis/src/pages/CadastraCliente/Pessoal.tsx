@@ -31,6 +31,7 @@ export default function Pessoal() {
             </div>
 
             <div className="container">
+                <div className="border">
                 <form className="content">
 
                     <div className="input">
@@ -76,6 +77,7 @@ export default function Pessoal() {
                         <Link to="/cadastrar_cliente/endereco">PRÓXIMO</Link>
                     </button>
                 </form>
+                </div>
             </div>
         </>
     )
