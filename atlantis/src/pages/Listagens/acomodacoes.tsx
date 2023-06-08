@@ -21,10 +21,10 @@ export default function Acomodacoes() {
                             <tr>
                                 <td data-label="Nome" className="largura-dobrada">Casal Simples</td>
                                 <td data-label="Visualizar/Editar">
-                                    <Link to="#"><FiEdit /></Link>
+                                    <Link to="/ver_editar_acomodacao"><FiEdit /></Link>
                                 </td>
                                 <td data-label="Excluir">
-                                    <Link to="#"><FiTrash2 /></Link>
+                                    <Link to="/deletar_acomodacao"><FiTrash2 /></Link>
                                 </td>
                             </tr>
                             <tr>

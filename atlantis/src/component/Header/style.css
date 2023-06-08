@@ -131,3 +131,11 @@ input[type=checkbox] {
         background-color: #00a8cb;
     }
 }
+
+/* ---------------------------------------- */
+
+@media (max-width: 600px){
+    .menu {
+        height: 90vh;
+    }
+}

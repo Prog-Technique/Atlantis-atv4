@@ -58,7 +58,7 @@ tr button{
 }
 
 .container-table{
-    padding: 1px 220px;
+    padding: 1px 200px;
     margin-bottom: 2%;
 }
 
@@ -67,10 +67,66 @@ tr button{
     justify-content: center;
 }
 
+@media screen and (max-width: 1285px) {
+    .container-table{
+        padding: 1px 135px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .container-table{
+        padding: 1px 35px;
+    }
+}
+
 @media screen and (max-width: 680px) {
 
     .container-table {
         padding: 1px 25px;
-        margin-bottom: 5%;
+        margin: 5% 0;
+    }
+
+    table tbody tr {
+        background-color: #fff;
+    }
+
+    .largura-dobrada {
+        width: auto;
+    }
+
+    table thead{
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr{
+        display: block;
+        padding: 0;
+        margin-bottom: 2em;
+    }
+
+    .noMargin{
+        margin-bottom: 0;
+    }
+
+    table td{
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 1em;
+        text-align: right;
+    }
+
+    table td::before{
+        content: attr(data-label);
+        float: left;
+        font-size: 0.85em;
+        font-weight: bold;
+        text-transform: uppercase;
     }
 }

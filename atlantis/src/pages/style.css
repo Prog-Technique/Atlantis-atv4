@@ -94,3 +94,39 @@ h1{
     display: flex;
     align-self: center;
 }
+
+/* ------------------------------------------- */
+
+@media (max-width: 600px){
+
+    .container {
+        margin-bottom: 15%;
+    }
+
+    .border {
+        flex-direction: column;
+        gap: 0;
+        padding: 45px 25px 30px 25px;
+    }
+
+    .content button {
+        width: 63vw;
+        font-size: 1.2em;
+    }
+
+    .input input, .opcoes select, .input select {
+        width: 60vw;
+        font-size: 1.1em;
+    }
+
+    label {
+        font-size: 1.1em;
+    }
+
+    .plusCircle {
+        height: 30px;
+        width: 30px;
+    }
+
+    
+}

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "../../component/Header";
 import { FiEdit, FiTrash2 } from "react-icons/fi";
+import ModalDelTitular from '../../component/ModalDeletar/titular';
 import './styles.css'
 
 export default function Titular() {
@@ -25,7 +26,7 @@ export default function Titular() {
                                 <Link to="/editar_cliente/1"><FiEdit/></Link>
                             </td>
                             <td data-label="Excluir">
-                                <Link to="#"><FiTrash2/></Link>
+                                <Link to="/deletar_cliente/1"><FiTrash2/></Link>
                             </td>
                         </tr>
 

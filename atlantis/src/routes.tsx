@@ -10,11 +10,14 @@ import Dependentes from './pages/CadastraCliente/Dependentes';
 import Acomodacao from './pages/Sozinhos/cadastraAcomodacao';
 import VinculaHospedeQuarto from './pages/Sozinhos/vincula';
 
-import EditarCliente from './pages/Sozinhos/editarCli';
-
-import Acomodacoes from './pages/Listagens/acomodacoes';
 import Titular from './pages/Listagens/listaTitular';
+import EditarCliente from './component/VerEditar/titular';
+import ModalDelTitular from './component/ModalDeletar/titular';
+
 import Dependente from './pages/Listagens/listaDependentes';
+import Acomodacoes from './pages/Listagens/acomodacoes';
+import VerEditarAcomodacao from './component/VerEditar/acomodacao';
+import ModalDelAcomodacao from './component/ModalDeletar/acomodacao';
 
 import './index.css';
 
@@ -33,11 +36,15 @@ export default function RoutesApp() {
                 <Route path='/vincular' element={<VinculaHospedeQuarto />} />
 
                 <Route path='/titular' element={<Titular />} />
-                <Route path='/dependente' element={<Dependente />} />
                 <Route path='/editar_cliente/1' element={<EditarCliente />} />
+                <Route path='/deletar_cliente/1' element={<ModalDelTitular />} />
+                
+                <Route path='/dependente' element={<Dependente />} />
                 
                 <Route path='/acomodacoes' element={<Acomodacoes />} />
-
+                <Route path='/ver_editar_acomodacao' element={<VerEditarAcomodacao />} />
+                <Route path='/deletar_acomodacao' element={<ModalDelAcomodacao />} />
+                
             </Routes>
         </Router>
     );

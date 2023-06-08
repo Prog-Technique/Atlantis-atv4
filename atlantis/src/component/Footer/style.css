@@ -29,3 +29,16 @@
     font-size: .6em;
     text-align: center;
 }
+
+/* ------------------------------------------- */
+
+@media (max-width: 600px){
+    .blue {
+        flex-direction: column-reverse;
+        gap: 1em;
+    }
+
+    .footer {
+        height: 23vh;
+    }
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import Header from "../../component/Header";
+import Header from "../Header";
 import { FiArrowLeft, FiPlusCircle } from "react-icons/fi";
 
 export default function EditarCliente() {
@@ -215,10 +215,12 @@ export default function EditarCliente() {
 
                     <FiPlusCircle size={25} className="plusCircle" onClick={() => addFormField2()}/>
 
+                    <div className='button-color' id="green">
+                        <Link to="/titular">
+                            <button type="submit">ENVIAR</button>
+                        </Link>
+                    </div>
 
-                    <Link to="/titular">
-                        <button type="submit">ENVIAR</button>
-                    </Link>
                 </form>
             </div>
             </div>
