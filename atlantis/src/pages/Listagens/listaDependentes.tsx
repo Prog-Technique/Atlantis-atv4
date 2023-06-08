@@ -6,7 +6,7 @@ import './styles.css'
 export default function Dependente() {
     return (
         <><Header /><main>
-            <h1>Dependente</h1>
+            <h1>Dependentes</h1>
 
             <div className='container-table'>
                 <table>

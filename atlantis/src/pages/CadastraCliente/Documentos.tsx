@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { FiArrowLeft } from "react-icons/fi";
 import Header from "../../component/Header";
+import { FiPlusCircle } from "react-icons/fi";
 
 export default function Documentos() {
 
@@ -67,11 +68,11 @@ export default function Documentos() {
                     </>
                 ))}
                 <form className="content">
-                    <button type="button" style={{ backgroundColor: "gray" }} onClick={() => addFormField()}>Adicionar outro documento</button>
+                    <FiPlusCircle size={25} className="plusCircle" onClick={() => addFormField()}/>
 
-                    <button type="submit">
-                        <Link to="/cadastrar_cliente/dependentes">PRÓXIMO</Link>
-                    </button>
+                    <Link to="/cadastrar_cliente/dependentes">
+                        <button type="submit">PRÓXIMO</button>
+                    </Link>
                 </form>
                 </div>
             </div>

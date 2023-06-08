@@ -40,9 +40,9 @@ export default function Acomodacao() {
                         <input id="garagem" type="number" />
                     </div>
 
-                    <button type="submit">
-                        <Link to="/">ENVIAR</Link>
-                    </button>
+                    <Link to="/">
+                        <button type="submit">ENVIAR</button>
+                    </Link>
                 </form>
                 </div>
             </div>

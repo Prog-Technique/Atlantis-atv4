@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import Header from "../../component/Header";
-import Footer from "../../component/Footer";
+import { FiPlusCircle } from "react-icons/fi";
 
 export default function Pessoal() {
 
@@ -71,11 +71,11 @@ export default function Pessoal() {
                         </>
                     ))}
 
-                    <button type="button" style={{backgroundColor: "gray"}} onClick={() => addFormField()}>Adicionar outro telefone</button>
+                    <FiPlusCircle size={25} className="plusCircle" onClick={() => addFormField()}/>
 
-                    <button type="submit">
-                        <Link to="/cadastrar_cliente/endereco">PRÓXIMO</Link>
-                    </button>
+                    <Link to="/cadastrar_cliente/endereco">
+                        <button type="submit">PRÓXIMO</button>
+                    </Link>
                 </form>
                 </div>
             </div>

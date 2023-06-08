@@ -21,15 +21,18 @@ export default function VinculaHospedeQuarto() {
                     <label htmlFor="quarto">Acomodar em:</label>
                     <div className="opcoes">
                         <select>
+                                <option value="Csimples">Casal Simples</option>
                                 <option value="Fsimples">Família Simples</option>
                                 <option value="Fmais">Família Mais</option>
                                 <option value="Fsuper">Família Super</option>
+                                <option value="Ssimples">Solteiro Simples</option>
+                                <option value="Smais">Solteiro Mais</option>
                             </select>
                         </div>
 
-                    <button type="submit">
-                        <Link to="/">VINCULAR</Link>
-                    </button>
+                    <Link to="/"> 
+                        <button type="submit">VINCULAR</button>
+                    </Link>
                 </form>
                 </div>
             </div>

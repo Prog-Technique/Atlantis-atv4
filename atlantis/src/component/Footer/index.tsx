@@ -13,7 +13,7 @@ export default function Footer() {
                 </div>
                 <div>
                     <p>Contato</p>
-                    <p>(12) 99191-2428</p>
+                    <p>(12) 99191-2112</p>
                 </div>
             </div>
 

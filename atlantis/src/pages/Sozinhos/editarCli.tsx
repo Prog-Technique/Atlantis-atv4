@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import Header from "../../component/Header";
-import { FiArrowLeft } from "react-icons/fi";
+import { FiArrowLeft, FiPlusCircle } from "react-icons/fi";
 
 export default function EditarCliente() {
 
@@ -85,7 +85,7 @@ export default function EditarCliente() {
     return (
         <> <Header />
             <div className="onTop">
-                <Link to="/clientes">
+                <Link to="/titular">
                     <FiArrowLeft size={25}/></Link>
                 <h1>Visualizar/Editar</h1>
                 <h2>Cliente: Amanda</h2>
@@ -125,8 +125,7 @@ export default function EditarCliente() {
 
                             <div className="input">
                                 <label htmlFor="tipo">Tipo de documento</label>
-                                <select>
-                                    {/* <option>Selecione</option> */}
+                                <select className="opcoes">
                                     <option>CPF</option>
                                     <option>RG</option>
                                     <option>Passaporte</option>
@@ -147,7 +146,7 @@ export default function EditarCliente() {
                                 <button type="button" style={{ backgroundColor: "red" }} onClick={() => removeFormField(index)}>Deletar</button>
                                 : null}
 
-                            <button type="button" style={{ backgroundColor: "gray" }} onClick={() => addFormField()}>Adicionar outro documento</button>
+                            <FiPlusCircle size={25} className="plusCircle" onClick={() => addFormField()}/>
 
                         </form>
 
@@ -214,11 +213,12 @@ export default function EditarCliente() {
                         </>
                     ))}
 
-                    <button type="button" style={{ backgroundColor: "gray" }} onClick={() => addFormField2()}>Adicionar outro telefone</button>
+                    <FiPlusCircle size={25} className="plusCircle" onClick={() => addFormField2()}/>
 
-                    <button type="submit">
-                        <Link to="/clientes">ENVIAR</Link>
-                    </button>
+
+                    <Link to="/titular">
+                        <button type="submit">ENVIAR</button>
+                    </Link>
                 </form>
             </div>
             </div>

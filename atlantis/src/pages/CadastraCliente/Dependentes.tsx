@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { FiArrowLeft } from "react-icons/fi";
 import Header from "../../component/Header";
+import { FiPlusCircle } from "react-icons/fi";
 
 export default function Dependentes() {
 
@@ -146,7 +147,7 @@ export default function Dependentes() {
                                 <button type="button" style={{ backgroundColor: "red" }} onClick={() => removeFormField(index)}>Deletar</button>
                                 : null}
 
-                            <button type="button" style={{ backgroundColor: "gray" }} onClick={() => addFormField()}>Adicionar outro documento</button>
+                            <FiPlusCircle size={25} className="plusCircle" onClick={() => addFormField()}/>
 
                         </form>
 
@@ -213,11 +214,12 @@ export default function Dependentes() {
                         </>
                     ))}
 
-                    <button type="button" style={{ backgroundColor: "gray" }} onClick={() => addFormField2()}>Adicionar outro telefone</button>
+                    <FiPlusCircle size={25} className="plusCircle" onClick={() => addFormField2()}/>
 
-                    <button type="submit">
-                        <Link to="/">ENVIAR</Link>
-                    </button>
+
+                    <Link to="/">
+                        <button type="submit">ENVIAR</button>
+                    </Link>
                 </form>
                 </div>
             </div>

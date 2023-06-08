@@ -95,9 +95,9 @@ export default function Endereco() {
                         <input id="pais" type="txt" value={address.pais} onChange={handleCep} />
                     </div>
 
-                    <button type="submit">
-                        <Link to="/cadastrar_cliente/documentos">PRÓXIMO</Link>
-                    </button>
+                    <Link to="/cadastrar_cliente/documentos">
+                        <button type="submit">PRÓXIMO</button>
+                    </Link>
                 </form>
                 </div>
             </div>

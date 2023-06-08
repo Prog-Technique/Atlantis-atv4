@@ -6,7 +6,7 @@ export default function Acomodacoes() {
     return (
         <><Header />
             <main>
-                <h1> </h1>
+                <h1>Acomodações</h1>
 
                 <div className='container-table'>
                     <table>

@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 18vh;
+    height: 20vh;
 }
 
 .blue {
@@ -20,8 +20,12 @@
     font-size: .8em;
 }
 
-.white p{
+.white {
+    margin-top: 20px;
+}
+
+.white p {
     color: #555555;
-    font-size: .5em;
+    font-size: .6em;
     text-align: center;
 }
