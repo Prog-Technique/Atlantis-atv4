@@ -17,7 +17,7 @@ export default function Header() {
             <div className="menu">
 
                 <li className="services">
-                    <Link to="#">Cadastrar</Link>
+                    <Link to="#" className="dropdownTitle">Cadastrar</Link>
                     <ul className="dropdown">
                         <li><Link to="/cadastrar_cliente">Cliente</Link></li>
                         <li><Link to="/cadastrar_acomodacao">Acomodação</Link></li>
@@ -25,7 +25,7 @@ export default function Header() {
                     </ul>
                 </li>
                 <li className="services">
-                    <Link to="#">Listagens</Link>
+                    <Link to="#" className="dropdownTitle">Listagens</Link>
                     <ul className="dropdown">
                         <li><Link to="/titular">Titulares</Link></li>
                         <li><Link to="/dependente">Dependentes</Link></li>
